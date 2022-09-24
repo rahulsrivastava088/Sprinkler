@@ -20,8 +20,11 @@ class Plant_Profile extends StatelessWidget {
               children: [
               Image.asset("assets/images/plant.png"),
               Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Icon(Icons.camera_alt_rounded),
+                padding: const EdgeInsets.all(5.0),
+                child: CircleAvatar(
+                  backgroundColor: Colors.grey.shade300,
+                  child: Icon(Icons.camera_alt_rounded, color: Colors.black,),
+                  ),
               ),
               ]),
             const SizedBox(
