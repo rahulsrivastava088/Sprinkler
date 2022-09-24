@@ -15,7 +15,18 @@ class Plant_Profile extends StatelessWidget {
         ),
         child: ListView(
           children: [
-            Image.asset("assets/images/plant.png"),
+            Stack(
+              alignment: Alignment.bottomRight,
+              children: [
+              Image.asset("assets/images/plant.png"),
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: CircleAvatar(
+                  backgroundColor: Colors.grey.shade300,
+                  child: Icon(Icons.camera_alt_rounded, color: Colors.black,),
+                  ),
+              ),
+              ]),
             const SizedBox(
               height: 16,
             ),
@@ -72,7 +83,7 @@ class Plant_Profile extends StatelessWidget {
               height: 40,
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Expanded(
                   child: Container(
@@ -80,13 +91,16 @@ class Plant_Profile extends StatelessWidget {
                       padding: const EdgeInsets.all(10.0),
                       child: Column(
                         children: [
-                          Text(
-                            "Soil Moisture",
-                            style: GoogleFonts.montserrat(
-                              textStyle: TextStyle(
-                                color: Colors.white,
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
+                          FittedBox(
+                            fit: BoxFit.fitWidth,
+                            child: Text(
+                              "Soil Moisture",
+                              style: GoogleFonts.montserrat(
+                                textStyle: TextStyle(
+                                  color: Colors.white,
+                                  // fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                             ),
                           ),
@@ -139,13 +153,16 @@ class Plant_Profile extends StatelessWidget {
                       padding: const EdgeInsets.all(10.0),
                       child: Column(
                         children: [
-                          Text(
-                            "Light Intensity",
-                            style: GoogleFonts.montserrat(
-                              textStyle: TextStyle(
-                                color: Colors.white,
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
+                          FittedBox(
+                            fit: BoxFit.fitWidth,
+                            child: Text(
+                              "Light Intensity",
+                              style: GoogleFonts.montserrat(
+                                textStyle: TextStyle(
+                                  color: Colors.white,
+                                  // fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                             ),
                           ),
@@ -203,7 +220,10 @@ class Plant_Profile extends StatelessWidget {
                 color: Colors.green.shade200,
               ),
               child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 12,),
+                padding: const EdgeInsets.symmetric(
+                  vertical: 10,
+                  horizontal: 12,
+                ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
