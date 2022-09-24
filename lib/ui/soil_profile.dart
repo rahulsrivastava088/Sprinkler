@@ -218,7 +218,7 @@ class SoilProfile extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.only(bottom: 10),
                             child: Text(
-                              "Past Trends",
+                              "History",
                               textAlign: TextAlign.start,
                               style: GoogleFonts.montserrat(
                                 textStyle: TextStyle(
@@ -231,7 +231,6 @@ class SoilProfile extends StatelessWidget {
                           ),
                           SizedBox(
                             height: 220,
-              
                             child: DChartBar(
                               measureMax: 100,
                               measureMin: 0,
